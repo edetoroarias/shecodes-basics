@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esoterica World</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      h1 {
+        text-align: center;
+        color: #91d2f0;
+        font-family: "Courier New", Courier, monospace;
+        text-transform: uppercase;
+        border: solid 5px transparent;
+        border-radius: 10px;
+        padding: 0;
+        margin: 20px auto;
+        background-image: linear-gradient(white, white),
+          linear-gradient(315deg, #51a2c8, #9fddf9 50%, #9370da);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        width: 500px;
+      }
+
+      h2 {
+        text-align: center;
+        color: mediumpurple;
+      }
+
+      img {
+        display: block;
+        margin: 50px auto 0px auto;
+        max-width: 90%;
+        border-radius: 15px;
+      }
+
+      a {
+        display: block;
+        text-align: center;
+        margin: 10px auto 25px auto;
+        font-weight: lighter;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      a:link {
+        color: #51a2c8;
+      }
+
+      a:visited {
+        color: #9370da;
+      }
+
+      p {
+        text-align: center;
+        line-height: 1.5;
+        font-size: 18px;
+        font-weight: lighter;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        margin: 0 auto;
+        max-width: 85%;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        box-sizing: border-box;
+        box-shadow: 5px 5px 5px #9370da;
+        border-radius: 10px;
+        padding: 10px 20px;
+        color: #9370da;
+        background-image: linear-gradient(white, white),
+          linear-gradient(315deg, #51a2c8, #9fddf9 50%, #9370da);
+        font-size: 18px;
+        font-family: "Courier New", Courier, monospace;
+        text-transform: uppercase;
+      }
+
+      button:hover {
+        color: #fff;
+        background: #51a2c8;
+        box-shadow: 5px 5px 5px #9fddf9;
+      }
+
+      .container {
+        margin: 0 auto;
+        padding: 0px;
+      }
+
+      #sidebar {
+        position: absolute;
+        top: 0px;
+        left: -200px;
+        width: 200px;
+        height: 100%;
+        background: #9fddf9;
+        transition: all 300ms linear;
+      }
+
+      #sidebar.active {
+        left: 0px;
+      }
+
+      #sidebar .sidebar-list {
+        list-style: none;
+        padding: 15px 10px;
+        border-bottom: 1px solid rgba (100, 100, 100, 0.3);
+      }
+
+      li {
+        color: #3882a2;
+        text-transform: uppercase;
+        padding: 15px 10px;
+        border-bottom: 1px solid #3882a2;
+        cursor: pointer;
+      }
+
+      li:hover {
+        color: #9fddf9;
+      }
+
+      .toggle-button {
+        position: absolute;
+        left: 230px;
+        top: 20px;
+      }
+
+      .toggle-button span {
+        display: block;
+        width: 30px;
+        height: 5px;
+        background: #9fddf9;
+        margin: 3px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="sidebar">
+        <div class="toggle-button" onclick="toggleSidebar(this)">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="sidebar-list">
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+
+      <h1><strong> Game World of Esoterica</strong></h1>
+      <h2>Divinity is within and all around us.</h2>
+      <img
+        src="https://www.zeldadungeon.net/wp-content/uploads/2017/09/UE-Water-Temple-1.png"
+        alt="Water temple"
+      />
+      <a href="https://www.youtube.com/watch?v=ehemZvQuqyA"
+        >Meditate at the Water Temple</a
+      >
+      <p>
+        The biggest lie ever told is that Heaven is a place only attainable in
+        death. <br />
+        The World of Esoterica invites players to build the utopia that for
+        centuries has been forbidden. <br />
+        <br />
+        <em> Sovereignty in creation.</em>
+      </p>
+      <hr />
+      <button class="button">🕳 Portal 🕳</button>
+    </div>
+
+    <script>
+      function portal() {
+        let name = prompt("What is your first name?");
+        let age = prompt("How old are you?");
+        let heading = document.querySelector("h1");
+        if (age >= 18) {
+          heading.innerHTML = "Greetings " + name + ". Welcome to Game World. ";
+          let email = prompt("What is your e-mail address?");
+        } else {
+          heading.innerHTML =
+            "Sorry " + name + ". You're time has not come yet. ";
+        }
+      }
+
+      let portalButton = document.querySelector("button");
+      portalButton.addEventListener("click", portal);
+
+      function toggleSidebar(ref) {
+        document.getElementById("sidebar").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
