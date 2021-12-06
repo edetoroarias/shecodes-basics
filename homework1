@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        h1 {
+            color: #1A64D6;
+            font-size: 34px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 48px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 34px;
+            font-weight: 400;
+            text-align: center;
+            line-height: 48px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+        }
+
+        .li {
+            text-align: center;
+            display: list-item;
+            margin: 0 auto;
+            max-width: 400px;
+            padding: 10px 0px;
+            border-radius: 10px;
+        }
+
+        li:hover {
+            background-color: #fffbef;
+            transition: all 200ms ease-in-out;
+        }
+
+        h3 {
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p {
+            opacity: 0.7;
+            font-size: 18px;
+            font-family: monospace;
+            text-align: center;
+        }
+
+        button {
+            appearance: auto;
+            color: #fff;
+            background-color: #1a64d6;
+            border: 1px solid #1a64d6;
+            font-size: 16px;
+            line-height: 22px;
+            display: block;
+            margin: 20px auto;
+            padding: 16px 24px;
+            border-radius: 30px;
+            transition: all 200ms ease-in-out;
+            box-shadow: rgb(37, 39, 89 / 8%) 0px 8px 8px 0px;
+        }
+
+        button:hover {
+            color: #1a64d6;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+    </style>
+  </head>
+  <body>
+    <h1> 🌤 </br> Currently 21° in Tokyo</h1>
+    <h2> 13° / 
+        <strong> 23°</strong> 
+    </h2>
+    <ul>
+        <li class="li">
+            <h3 class="h3"> 🌧 Tomorrow </h3>
+            <p class="p"> 10° / 
+                <strong> 22° </strong> 
+            </p>
+            </li>
+        <li class="li">
+            <h3 class="h3"> 🌥 Saturday</h3>
+            <p class="p"> 15° / 
+                <strong> 17°</strong>
+            </p>
+            </li>
+        <li class="li">
+            <h3 class="h3"> ☀️ Sunday</h3>
+            <p class="p"> 25° / 
+                <strong>28°</strong> 
+            </p>
+            </li>
+         </ul>
+    <button> Change city </button>
+    <p>Coded by Elisa De Toro Arias</p>
+  </body>
+</html>
